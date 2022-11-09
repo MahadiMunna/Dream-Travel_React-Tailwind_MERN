@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider';
+import logo from '../../../assets/logo/dream-travel-logo.png'
 
 const Header = () => {
     const {user,logOut} = useContext(AuthContext);
@@ -38,6 +39,7 @@ const Header = () => {
                             {navLinks}
                         </ul>
                     </div>
+                    <img src={logo} width="50" height="50"  alt="" />
                     <Link to='/' className="btn btn-ghost normal-case text-3xl font-bold text-orange-600">Dream Travel</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

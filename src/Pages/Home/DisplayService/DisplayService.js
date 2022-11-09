@@ -21,7 +21,7 @@ const DisplayService = () => {
                     
                 }
             </div>
-            <div className='text-center mt-5'>
+            <div className='text-center mt-10'>
                 <button className="btn btn-outline btn-error"><Link to='/services'>View All</Link></button>
             </div>
         </div>
