@@ -1,19 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider';
 
 const Header = () => {
+    const {user,logOut} = useContext(AuthContext);
+    
+    const handleLogout= ()=>{
+        
+        logOut()
+        .then(()=>{})
+        .catch(()=>{})
+    }
     const navLinks = <>
         <li className='font-bold'><Link to='/'>Home</Link></li>
         <li className='font-bold'><Link to='/services'>Services</Link></li>
         <li className='font-bold'><Link to='/blogs'>Blogs</Link></li>
         {
-            // user?.email ?
-            //     <>
-            //         <li className='font-bold'><Link to='/reviews'>My reviews</Link></li>
-            //         <li className='font-bold'><Link to='/add-service'>Add Service</Link></li>
-            //         <li className='font-bold'><Link to='/logout'>Logout</Link></li>
-            //     </>
-            //     :
+            user?.email?
+                <>
+                    <li className='font-bold'><Link to='/my-reviews'>My reviews</Link></li>
+                    <li className='font-bold'><Link to='/add-service'>Add Service</Link></li>
+                    <li onClick={handleLogout} className='font-bold'><Link to='/login'>Logout</Link></li>
+                </>
+                :
                 <li className='font-bold'><Link to='/login'>Login</Link></li>
         }
     </>
@@ -29,7 +38,7 @@ const Header = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Dream Travel</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-2xl fw-bold text-orange-600">Dream Travel</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

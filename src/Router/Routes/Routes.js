@@ -1,7 +1,9 @@
 import Main from "../../Layout/Main";
+import AddService from "../../Pages/AddService/AddService";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import Reviews from "../../Pages/Reviews/Reviews";
 import Services from "../../Pages/Services/Services";
 import SignUp from "../../Pages/SignUp/SignUp";
 
@@ -33,6 +35,17 @@ const router = createBrowserRouter([
                 path:'/signup',
                 element:<SignUp></SignUp>
             },
+            
+            {
+                path:'/my-reviews',
+                element:<Reviews></Reviews>
+            },
+            
+            {
+                path:'/add-service',
+                element:<AddService></AddService>
+            },
+            
         ]
     },
     {
