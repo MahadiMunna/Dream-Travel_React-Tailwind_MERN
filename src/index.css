@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'react-photo-view/dist/react-photo-view.css';
 
 body {
   margin: 0;

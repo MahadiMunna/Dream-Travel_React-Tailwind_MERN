@@ -5,6 +5,7 @@ import useTitle from '../../Hooks/useTitle';
 import Reviews from '../Reviews/Reviews';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceDetails = () => {
     useTitle('Details');
@@ -39,7 +40,13 @@ const ServiceDetails = () => {
     return (
         <div className='grid gap-10 grid-cols-1 md:grid-cols-2 my-20'>
             <div className='col-span'>
-                <img className='shadow-lg rounded' src={img} alt="" />
+                <PhotoProvider>
+                    <div className="foo">
+                        <PhotoView src={img}>
+                            <img src={img} alt="" />
+                        </PhotoView>
+                    </div>
+                </PhotoProvider>
                 <h2 className='mt-5 font-bold text-2xl text-center'>{name}</h2>
                 <p className='text-lg mt-5'>{details}</p>
                 <div className="card-actions justify-between items-center my-10">
