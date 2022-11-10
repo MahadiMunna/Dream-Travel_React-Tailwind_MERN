@@ -3,9 +3,12 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 import Reviews from '../Reviews/Reviews';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceDetails = () => {
     useTitle('Details');
+    const notify = () => toast("Successfully added");
     const { _id, img, name, details, price } = useLoaderData();
     const { user } = useContext(AuthContext);
 
@@ -41,7 +44,8 @@ const ServiceDetails = () => {
                 <p className='text-lg mt-5'>{details}</p>
                 <div className="card-actions justify-between items-center my-10">
                     <div className='font-bold text-lg'>Price: {price}</div>
-                    <div onClick={handleAddService} className="badge badge-error text-lg font-bold hover:badge-outline"><Link>Add Service</Link></div>
+                    <div onClick={handleAddService} className="badge badge-error text-lg font-bold hover:badge-outline"><Link onClick={notify}>Add Service</Link></div>
+                    <ToastContainer />
                 </div>
             </div>
             <div>
