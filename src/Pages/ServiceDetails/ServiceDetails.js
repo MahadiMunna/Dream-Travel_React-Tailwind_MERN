@@ -17,7 +17,7 @@ const ServiceDetails = () => {
             name:name,
             price:price           
         }
-
+  
         fetch('http://localhost:5000/my-services',{
             method:'POST',
             headers:{
@@ -45,7 +45,7 @@ const ServiceDetails = () => {
                 </div>
             </div>
             <div>
-                <Reviews key={_id} id={_id}></Reviews>
+                <Reviews key={_id} id={_id} name={name}></Reviews>
             </div>
         </div>
     );

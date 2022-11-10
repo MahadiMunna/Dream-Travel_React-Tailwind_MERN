@@ -19,7 +19,6 @@ const SignUp = () => {
         createUser(email,password)
         .then(result=>{
             const user = result.user;
-            console.log(user);
             handleUserInfo(name,img);
             navigate('/login');
             form.reset();

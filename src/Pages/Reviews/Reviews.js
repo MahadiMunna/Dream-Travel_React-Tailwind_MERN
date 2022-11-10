@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import Review from '../Review/Review';
 
-const Reviews = ({id}) => {
+const Reviews = ({id,name}) => {
     const {user} = useContext(AuthContext);
     const [reviews,setReviews] = useState([]);
-    console.log(reviews);
 
     const handleComment = event => {
         event.preventDefault();
@@ -15,6 +14,7 @@ const Reviews = ({id}) => {
         
         const review = {
             serviceId : id,
+            serviceName:name,
             userId: user?.uid,
             userName : user?.displayName,
             userImg : user?.photoURL,
