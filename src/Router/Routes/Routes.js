@@ -1,9 +1,9 @@
 import Main from "../../Layout/Main";
-import AddService from "../../Pages/AddService/AddService";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
-import Reviews from "../../Pages/Reviews/Reviews";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
+import MyServices from "../../Pages/MyServices/MyServices";
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 import Services from "../../Pages/Services/Services";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -44,12 +44,12 @@ const router = createBrowserRouter([
             
             {
                 path:'/my-reviews',
-                element:<Reviews></Reviews>
+                element:<MyReviews></MyReviews>
             },
             
             {
                 path:'/add-service',
-                element:<AddService></AddService>
+                element:<MyServices></MyServices>
             },
             
         ]
