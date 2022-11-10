@@ -28,7 +28,7 @@ const Sections = () => {
 
             {/* section 2 */}
             
-            <div className='text-center my-20 shadow-xl'>
+            <div className='text-center my-20'>
                 <h1 className="text-5xl font-bold mb-5">Our Partners!</h1>
                 <p className="py-6 text-xl">Dream travel is trusted by a lot of people.</p>
                 <div className='grid grid-cols-5 sm:d-none justify-around items-center'>

@@ -14,50 +14,50 @@ const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
     {
-        path:'/',
+        path: '/',
         element: <Main></Main>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<Home></Home>,
+                path: '/',
+                element: <Home></Home>,
             },
             {
-                path:'/services',
-                element:<Services></Services>
+                path: '/services',
+                element: <Services></Services>
             },
             {
-                path:'/service-details/:id',
-                element:<ServiceDetails></ServiceDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/service-details/${params.id}`)
+                path: '/service-details/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`https://dream-travel-server.vercel.app/service-details/${params.id}`)
             },
             {
-                path:'/blogs',
-                element:<Blogs></Blogs>
+                path: '/blogs',
+                element: <Blogs></Blogs>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/signup',
-                element:<SignUp></SignUp>
+                path: '/signup',
+                element: <SignUp></SignUp>
             },
-            
+
             {
-                path:'/my-reviews',
-                element:<PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+                path: '/my-reviews',
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
-            
+
             {
-                path:'/add-service',
-                element:<MyServices></MyServices>
+                path: '/add-service',
+                element: <MyServices></MyServices>
             },
-            
+
         ]
     },
     {
-        path:'/*',
-        element:<h2>404 page not found</h2>
+        path: '/*',
+        element: <h2>404 page not found</h2>
     }
 ])
 

@@ -6,33 +6,33 @@ import Reviews from '../Reviews/Reviews';
 
 const ServiceDetails = () => {
     useTitle('Details');
-    const {_id, img, name, details, price } = useLoaderData();
-    const {user} = useContext(AuthContext);
+    const { _id, img, name, details, price } = useLoaderData();
+    const { user } = useContext(AuthContext);
 
     const handleAddService = () => {
         const myService = {
-            userId : user?.uid,
-            id:_id,
-            img:img,
-            name:name,
-            price:price           
+            userId: user?.uid,
+            id: _id,
+            img: img,
+            name: name,
+            price: price
         }
-  
-        fetch('http://localhost:5000/my-services',{
-            method:'POST',
-            headers:{
-                'content-type' : 'application/json'
+
+        fetch('https://dream-travel-server.vercel.app/my-services', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
             body: JSON.stringify(myService)
-        })       
-        .then(res=>res.json())
-        .then(data =>{
-            console.log(data)
         })
-        .catch(error=>console.log(error))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+            .catch(error => console.log(error))
     }
 
-    
+
     return (
         <div className='grid gap-10 grid-cols-1 md:grid-cols-2 my-20'>
             <div className='col-span'>

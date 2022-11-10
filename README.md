@@ -1,3 +1,32 @@
+# Project Name
+
+> Dream Travel
+
+# Project Details
+
+> Tourism based e-commerce web app. Here we provide some tour packages with reasonable price.
+
+# Features
+
+> Here you can log in with email - password or direct with your gmail.
+> Here you will see services in services page.
+> You will be able to add your service as you want.
+> You can give us service review and can see others.
+> You can edit and delete your review.
+
+# Functionalities
+
+> In this project we ues advance technologies.
+> we use react js.
+> Tailwind frame work with daisy ui.
+> Firebase for authentication.
+> MongoDB for database management.
+
+# Live link
+
+> https://dream-travel-c5cbb.web.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
