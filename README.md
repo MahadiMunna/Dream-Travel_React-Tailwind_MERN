@@ -1,10 +1,12 @@
+This is client side repository. Visit https://github.com/MahadiMunna/Dream-Travel_Server-side_Backend for server side repository.
+
 # Project Name
 
 > Dream Travel
 
 # Project Details
 
-> Tourism based e-commerce web app. Here we provide some tour packages with reasonable price.
+> Tourism based e-commerce web app. Here we provide some tour packages with reasonable price. 
 
 # Features
 
